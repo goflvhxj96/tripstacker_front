@@ -70,14 +70,14 @@
 
 /* 헤더 네비게이션 */
 .header-nav {
-  line-height: 50px;
+  line-height: 30px;
   margin-left: 3%;
   margin-right: 5%;
 }
 
 /* Logo */
 #logo {
-  margin-top: 15px;
+  margin-top: 10px;
   margin-right: 20px;
   width: 30vw;
   max-width: 500px;
