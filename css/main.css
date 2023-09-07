@@ -83,4 +83,49 @@ header a {
 
 /* =============================== Main ============================= */
 
+/* 검색창 */
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 12%;
+  z-index: 2;
+
+  > div > img {
+    width: min(30vw, 400px);
+  }
+
+  #searchBox {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    box-shadow: 5px 5px 8px 1px rgb(228, 228, 228);
+    border-radius: 25px;
+    width: min(50vw, 600px);
+    height: min(8vh, min(5vw, 60px));
+    margin-top: -15px;
+
+    > img {
+      width: auto;
+      height: 80%;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    > input {
+      border: 0;
+      width: 80%;
+      height: 80%;
+    }
+
+    > input:focus {
+      outline: none;
+    }
+  }
+}
+
 /* =============================== Footer ============================= */
