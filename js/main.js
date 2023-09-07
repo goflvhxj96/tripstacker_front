@@ -29,7 +29,7 @@ let opacityChangep = (entries, observer) => {
             entry.target.style.opacity = 1;
         } else if (entry.intersectionRatio >= 0.6) {
             searchBar.style.opacity = 0;
-        } else {
+        } else if (entry.boundingClientRect.top >= 0) {
             entry.target.style.opacity = 0;
             searchBar.style.opacity = 1;
         }
@@ -38,3 +38,21 @@ let opacityChangep = (entries, observer) => {
 const observerp = new IntersectionObserver(opacityChangep, optionsp);
 // 감시할 객체 추가
 observerp.observe(document.querySelector(".plan"));
+
+
+
+// 인기 게시글 옵저버
+const optionsb = { threshold: 0.6 };
+// 콜백함수
+let callback = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.intersectionRatio >= 0.6) {
+            entry.target.style.opacity = 1;
+        } else {
+            entry.target.style.opacity = 0;
+        }
+    });
+};
+const observerb = new IntersectionObserver(callback, optionsb);
+// 감시할 객체 추가
+observerb.observe(document.querySelector(".board"));
