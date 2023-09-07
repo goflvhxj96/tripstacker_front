@@ -7,35 +7,6 @@
 
 /* 메인 바탕색 */
 .backcolor {
-  /* Old browsers */
-  /* background: rgb(198, 247, 255) fixed; */
-  /* FF3.6-15 */
-  /* background: -moz-linear-gradient(
-      top,
-      rgba(198, 247, 255, 1) 0%,
-      rgba(214, 249, 255, 1) 16%,
-      rgba(249, 249, 249, 1) 63%
-    )
-    fixed; */
-  /* Chrome10-25,Safari5.1-6 */
-  /* background: -webkit-linear-gradient(
-      top,
-      rgba(198, 247, 255, 1) 0%,
-      rgba(214, 249, 255, 1) 16%,
-      rgba(249, 249, 249, 1) 63%
-    )
-    fixed; */
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  /* background: linear-gradient(
-      to bottom,
-      rgba(198, 247, 255, 1) 0%,
-      rgba(214, 249, 255, 1) 16%,
-      rgba(249, 249, 249, 1) 63%
-    )
-    fixed; */
-  /* IE6-9 */
-  /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c6f7ff', endColorstr='#f9f9f9',GradientType=0 ); */
-
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e8fff0+12,ffffff+68 */
   background: rgb(232, 255, 240) fixed; /* Old browsers */
   background: -moz-linear-gradient(top, rgba(232, 255, 240, 1) 12%, rgba(255, 255, 255, 1) 68%)
