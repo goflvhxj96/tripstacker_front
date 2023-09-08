@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body class="backcolor">
+    <!-- 헤더 & 네비게이션 -->
+    <header>
+      <nav class="header-nav horiverti-center">
+        <div class="horiverti-center">
+          <!-- 로고 -->
+          <img id="logo" src="../assets/logo1.PNG" alt="TripStacker Logo" />
+          <!-- plan | board -->
+          <div>
+            <ul class="navigate-list">
+              <li><a href="#" id="plan">Plan</a></li>
+              <li>|</li>
+              <li><a href="#" id="board">Board</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- 로그인 전 -->
+        <ul class="navigate-list logout-mode">
+          <li><a href="#" id="login">Sign In</a></li>
+          <li>|</li>
+          <li><a href="#">Sign Up</a></li>
+        </ul>
+        <!-- 로그인 후 -->
+        <ul class="navigate-list login-mode">
+          <li><a href="#" id="user">OOO 님</a></li>
+          <li><a href="#" id="logout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 메인-로그인/회원가입 창 -->
+    <main>
+      <div class="container right-panel-active">
+        <!-- 회원가입 -->
+        <div class="container__form container--signup">
+          <form action="#" class="form" id="form1">
+            <h2 class="form__title">회원가입</h2>
+            <input type="text" placeholder="이름" class="input" />
+            <input type="email" placeholder="이메일" class="input" />
+            <input type="password" placeholder="비밀번호" class="input" />
+            <input type="password" placeholder="비밀번호 확인" class="input" />
+            <button class="btn">회원가입</button>
+          </form>
+        </div>
+
+        <!-- 로그인 -->
+        <div class="container__form container--signin">
+          <form action="#" class="form" id="form2">
+            <h2 class="form__title">로그인</h2>
+            <input type="email" placeholder="이메일" class="input" />
+            <input type="password" placeholder="비밀번호" class="input" />
+            <div class="link" id="id-record"><span>아이디 저장</span><input type="checkbox" /></div>
+            <a href="#" class="link">비밀번호 찾기</a>
+            <button class="btn">로그인</button>
+          </form>
+        </div>
+
+        <!-- Overlay -->
+        <div class="container__overlay">
+          <div class="overlay">
+            <div class="overlay__panel overlay--left">
+              <button class="btn" id="signIn">로그인</button>
+            </div>
+            <div class="overlay__panel overlay--right">
+              <button class="btn" id="signUp">회원가입</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- 푸터 -->
+    <footer></footer>
+    <script src="../js/login.js"></script>
+  </body>
+</html>
