@@ -339,3 +339,19 @@ section {
 }
 
 /* =============================== Footer ============================= */
+footer {
+  margin: auto;
+  margin-top: 10%;
+  line-height: 50px;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-list > li {
+  margin: 10px;
+  font-weight: bold;
+}
