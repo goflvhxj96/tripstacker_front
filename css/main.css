@@ -28,6 +28,8 @@ header {
   background-color: rgba(255, 255, 255, 0.7);
   position: fixed;
   width: 100vw;
+  min-width: 550px;
+  top: 0;
   z-index: 2;
 }
 
@@ -48,13 +50,13 @@ header {
 /* Logo */
 #logo {
   margin-right: 20px;
-  width: min(30vw, 500px);
+  width: min(30vw, 400px);
 }
 
 /* a 태그 스타일 */
 header a {
   color: rgb(27, 104, 117);
-  font-size: min(1.5vw, 22px);
+  font-size: min(1vw, 22px);
   font-weight: bold;
   font-family: sans-serif;
   text-decoration: none;
@@ -73,11 +75,11 @@ header a {
 }
 
 #user {
-  font-size: min(1.5vw, 25px);
+  font-size: min(1vw, 25px);
 }
 
 #logout {
-  font-size: min(1vw, 15px);
+  font-size: min(0.8vw, 15px);
   color: gray;
 }
 
