@@ -1,0 +1,51 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  height: 100vh;
+}
+
+/* ========================= 검색 ======================= */
+.search {
+  background-color: rgb(138, 255, 214);
+  padding: 10px;
+}
+
+/* ========================= 지도 ======================= */
+.map {
+  background-color: black;
+}
+
+/* ========================= 플랜 ======================= */
+.plan {
+  background-color: brown;
+  padding: 10px;
+}
+
+#searchBar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  box-shadow: 2px 2px 3px 1px rgba(228, 228, 228, 0.7);
+  border-radius: 5px;
+  width: 90%;
+  height: 6%;
+  margin: auto;
+
+  > img {
+    width: auto;
+    height: 50%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  > input {
+    background-color: aqua;
+    border: 0;
+    width: 80%;
+    height: 60%;
+  }
+
+  > input:focus {
+    outline: none;
+  }
+}

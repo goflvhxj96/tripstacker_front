@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/header_footer.css" />
+    <link rel="stylesheet" href="../css/planner.css" />
+  </head>
+  <body class="backcolor">
+    <!-- 헤더 & 네비게이션 -->
+    <header>
+      <nav class="header-nav horiverti-center">
+        <div class="horiverti-center">
+          <!-- 로고 -->
+          <img id="logo" src="../assets/logo1.png" alt="TripStacker Logo" />
+          <!-- plan | board -->
+          <div>
+            <ul class="navigate-list">
+              <li><a href="#" id="plan">Plan</a></li>
+              <li>|</li>
+              <li><a href="#" id="board">Board</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- 로그인 전 -->
+        <ul class="navigate-list logout-mode">
+          <li><a href="#" id="login">Sign In</a></li>
+          <li>|</li>
+          <li><a href="#">Sign Up</a></li>
+        </ul>
+        <!-- 로그인 후 -->
+        <ul class="navigate-list login-mode">
+          <li><a href="#" id="user">OOO 님</a></li>
+          <li><a href="#" id="logout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 검색 | 지도 | 플랜 -->
+    <main>
+      <section class="container">
+        <!-- 검색 -->
+        <article class="search">
+          <!-- 검색바 -->
+          <div id="searchBar">
+            <img src="../assets/glass-black.png" alt="glass" />
+            <input type="text" id="search" />
+          </div>
+          <!-- 검색 조건 -->
+          <div class="filter">
+            <div>
+              <select id="sidoSelect">
+                <option class="sido" value="0">시/도</option>
+              </select>
+              <select id="gugunSelect">
+                <option class="gugun" value="0">구/군</option>
+              </select>
+            </div>
+            <div>
+              <details>
+                <summary>업종 선택</summary>
+                <input type="checkbox" name="service" id="s2" value="12" />
+                <label for="s1">관광지</label>
+                <input type="checkbox" name="service" id="s3" value="14" />
+                <label for="s1">문화시설</label>
+                <input type="checkbox" name="service" id="s4" value="15" />
+                <label for="s1">축제•공연•행사</label>
+                <input type="checkbox" name="service" id="s5" value="12" />
+                <label for="s1">여행코스</label>
+                <input type="checkbox" name="service" id="s6" value="25" />
+                <label for="s1">레포츠</label>
+                <input type="checkbox" name="service" id="s7" value="32" />
+                <label for="s1">숙박</label>
+                <input type="checkbox" name="service" id="s8" value="38" />
+                <label for="s1">쇼핑</label>
+                <input type="checkbox" name="service" id="s9" value="39" />
+                <label for="s1">음식점</label>
+              </details>
+            </div>
+          </div>
+          <!-- 공공데이터의 관광지 리스트 -->
+          <div>
+            <ul>
+              <li></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 지도 -->
+        <article class="map"></article>
+
+        <!-- 플랜 -->
+        <article class="plan">Plan</article>
+      </section>
+    </main>
+
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=df5c96b061e80ea455e8d15773c44292"
+    ></script>
+    <script src="../js/localcode.js"></script>
+    <script src="../js/planner.js"></script>
+  </body>
+</html>
