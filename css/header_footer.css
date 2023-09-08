@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+/* 메인 바탕색 */
+.backcolor {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e8fff0+12,ffffff+68 */
+  background: rgb(232, 255, 240) fixed; /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(232, 255, 240, 1) 12%, rgba(255, 255, 255, 1) 68%)
+    fixed; /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(232, 255, 240, 1) 12%, rgba(255, 255, 255, 1) 68%)
+    fixed; /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(232, 255, 240, 1) 12%, rgba(255, 255, 255, 1) 68%)
+    fixed; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8fff0', endColorstr='#ffffff',GradientType=0 ) fixed; /* IE6-9 */
+
+  width: 100vw;
+  height: 100vh;
+}
+
+/* =============================== Header ============================= */
+
+/* 헤더 상단에 고정 */
+header {
+  background-color: rgba(255, 255, 255, 0.7);
+  position: fixed;
+  width: 100vw;
+  min-width: 550px;
+  top: 0;
+  z-index: 2;
+}
+
+/* 수평수직 가운데 정렬 */
+.horiverti-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 헤더 네비게이션 */
+.header-nav {
+  line-height: 50px;
+  margin-left: 3%;
+  margin-right: 5%;
+}
+
+/* Logo */
+#logo {
+  margin-right: 20px;
+  width: min(30vw, 400px);
+}
+
+/* a 태그 스타일 */
+header a {
+  color: rgb(27, 104, 117);
+  font-size: min(1vw, 22px);
+  font-weight: bold;
+  font-family: sans-serif;
+  text-decoration: none;
+  text-shadow: 2px 3px 2px rgb(222, 224, 235);
+}
+
+/* 네비게이션 내 리스트 */
+.navigate-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 네비게이션 리스트 내 요소 간격 조절 */
+.navigate-list > li {
+  padding: 0px 15px 0px 0px;
+}
+
+#user {
+  font-size: min(1vw, 25px);
+}
+
+#logout {
+  font-size: min(0.8vw, 15px);
+  color: gray;
+}
+
+/* =============================== Footer ============================= */
+
+footer {
+  margin: auto;
+  margin-top: 10%;
+  line-height: 50px;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-list > li {
+  margin: 10px;
+  font-weight: bold;
+}
