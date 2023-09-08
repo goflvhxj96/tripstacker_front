@@ -42,13 +42,13 @@ observerp.observe(document.querySelector(".plan"));
 
 
 // 인기 게시글 옵저버
-const optionsb = { threshold: 0.6 };
+const optionsb = { threshold: 0.4 };
 // 콜백함수
 let callback = (entries, observer) => {
     entries.forEach(entry => {
-        if (entry.intersectionRatio >= 0.6) {
+        if (entry.intersectionRatio >= 0.4) {
             entry.target.style.opacity = 1;
-        } else {
+        } else if (entry.boundingClientRect.top > 0) {
             entry.target.style.opacity = 0;
         }
     });
