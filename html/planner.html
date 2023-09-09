@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TripStacker</title>
+    <link rel="stylesheet" href="../css/header_footer.css" />
+    <link rel="stylesheet" href="../css/planner.css" />
+  </head>
+  <body class="backcolor">
+    <!-- 헤더 & 네비게이션 -->
+    <header>
+      <nav class="header-nav horiverti-center">
+        <div class="horiverti-center">
+          <!-- 로고 -->
+          <img id="logo" src="../assets/logo1.png" alt="TripStacker Logo" />
+          <!-- plan | board -->
+          <div>
+            <ul class="navigate-list">
+              <li><a href="#" id="plan">Plan</a></li>
+              <li>|</li>
+              <li><a href="#" id="board">Board</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- 로그인 전 -->
+        <ul class="navigate-list logout-mode">
+          <li><a href="#" id="login">Sign In</a></li>
+          <li>|</li>
+          <li><a href="#">Sign Up</a></li>
+        </ul>
+        <!-- 로그인 후 -->
+        <ul class="navigate-list login-mode">
+          <li><a href="#" id="user">OOO 님</a></li>
+          <li><a href="#" id="logout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 검색 | 지도 | 플랜 -->
+    <main>
+      <section class="container">
+        <!-- 검색 -->
+        <article class="search">
+          <!-- 검색바 -->
+          <div id="searchBar">
+            <img src="../assets/glass-black.png" alt="glass" />
+            <input type="text" id="search" />
+          </div>
+          <!-- 검색 조건 -->
+          <div class="filter">
+            <div class="sidogugun">
+              <select id="sidoSelect">
+                <option class="sido" value="0">시/도</option>
+              </select>
+              <select id="gugunSelect">
+                <option class="gugun" value="0">구/군</option>
+              </select>
+            </div>
+            <div class="service">
+              <details>
+                <summary>✔ 업종 선택</summary>
+                <div>
+                  <div>
+                    <input type="checkbox" name="service" id="s1" value="12" />
+                    <label for="s1">관광지</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="service" id="s2" value="14" />
+                    <label for="s2">문화시설</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="service" id="s3" value="15" />
+                    <label for="s3">축제•공연•행사</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="service" id="s4" value="12" />
+                    <label for="s4">여행코스</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="service" id="s5" value="25" />
+                    <label for="s5">레포츠</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="service" id="s6" value="32" />
+                    <label for="s6">숙박</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="service" id="s7" value="38" />
+                    <label for="s7">쇼핑</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" name="service" id="s8" value="39" />
+                    <label for="s8">음식점</label>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+          <!-- 공공데이터의 관광지 리스트 -->
+          <div class="location-list">
+            <ul>
+              <div>전체 3개</div>
+              <li id="llt1">
+                <div>
+                  <img
+                    src="http://tong.visitkorea.or.kr/cms/resource/00/2879100_image2_1.jpg"
+                    alt="image"
+                    class="loca-img"
+                  />
+                  <span class="location"
+                    >🔹가가밀라노 롯데백화점 에비뉴엘 월드타워점</span
+                  >
+                  <span class="address">🔹서울 송파구 올림픽로 300¸ 2층</span>
+                  <img src="../assets/star.png" alt="관심" class="like" />
+                  <img
+                    src="../assets/add.png"
+                    alt="일정추가"
+                    class="add-to-plan"
+                  />
+                </div>
+              </li>
+              <li id="llt1">
+                <div>
+                  <img src="../assets/noImg.png" alt="image" class="loca-img" />
+                  <span class="location">🔹가가상점</span>
+                  <span class="address">🔹충청남도 공주시 감영길 3</span>
+                  <img src="../assets/star.png" alt="관심" class="like" />
+                  <img
+                    src="../assets/add.png"
+                    alt="일정추가"
+                    class="add-to-plan"
+                  />
+                </div>
+              </li>
+              <li id="llt1">
+                <div>
+                  <img
+                    src="http://tong.visitkorea.or.kr/cms/resource/12/2901512_image2_1.jpg"
+                    alt="image"
+                    class="loca-img"
+                  />
+                  <span class="location">🔹가경목장</span>
+                  <span class="address">🔹경기도 안산시 상록구 감골로 173</span>
+                  <img src="../assets/star.png" alt="관심" class="like" />
+                  <img
+                    src="../assets/add.png"
+                    alt="일정추가"
+                    class="add-to-plan"
+                  />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 지도 -->
+        <article class="map"></article>
+
+        <!-- 플랜 -->
+        <article class="plan">
+          <span>Plan Start</span>
+          <input type="date" name="start-date" id="start-date" />
+          <div class="day-plan">
+            <!-- 일수 -->
+            <details id="day1">
+              <summary>📜 1일차</summary>
+              <ul>
+                <!-- 일 별 장소 -->
+                <li>
+                  <div id="day1loca1" class="one-plan">
+                    <img
+                      src="http://tong.visitkorea.or.kr/cms/resource/00/2879100_image2_1.jpg"
+                      alt=""
+                    />
+                    <span class="location"
+                      >🔹가가밀라노 롯데백화점 에비뉴엘 월드타워점</span
+                    >
+                    <span class="address">🔹서울 송파구 올림픽로 300¸ 2층</span>
+                    <span class="time">
+                      <input type="time" class="start-time" />
+                      ~
+                      <input type="time" class="end-time" />
+                    </span>
+                    <textarea class="memo" placeholder="memo"></textarea>
+                  </div>
+                </li>
+                <li>
+                  <div id="day1loca2" class="one-plan">
+                    <img
+                      src="http://tong.visitkorea.or.kr/cms/resource/00/2879100_image2_1.jpg"
+                      alt=""
+                    />
+                    <span class="location"
+                      >🔹가가밀라노 롯데백화점 에비뉴엘 월드타워점</span
+                    >
+                    <span class="address">🔹서울 송파구 올림픽로 300¸ 2층</span>
+                    <span class="time">
+                      <input type="time" class="start-time" />
+                      ~
+                      <input type="time" class="end-time" />
+                    </span>
+                    <textarea class="memo" placeholder="memo"></textarea>
+                  </div>
+                </li>
+              </ul>
+            </details>
+            <details id="day2">
+              <summary>📜 2일차</summary>
+              <ul>
+                <!-- 일 별 장소 -->
+                <li>
+                  <div id="day1loca1" class="one-plan">
+                    <img
+                      src="http://tong.visitkorea.or.kr/cms/resource/00/2879100_image2_1.jpg"
+                      alt="image"
+                    />
+                    <span class="location"
+                      >🔹가가밀라노 롯데백화점 에비뉴엘 월드타워점</span
+                    >
+                    <span class="address">🔹서울 송파구 올림픽로 300¸ 2층</span>
+                    <span class="time">
+                      <input type="time" class="start-time" />
+                      ~
+                      <input type="time" class="end-time" />
+                    </span>
+                    <textarea class="memo" placeholder="memo"></textarea>
+                  </div>
+                </li>
+                <li>
+                  <div id="day1loca2" class="one-plan">
+                    <img
+                      src="http://tong.visitkorea.or.kr/cms/resource/00/2879100_image2_1.jpg"
+                      alt=""
+                    />
+                    <span class="location"
+                      >🔹가가밀라노 롯데백화점 에비뉴엘 월드타워점</span
+                    >
+                    <span class="address">🔹서울 송파구 올림픽로 300¸ 2층</span>
+                    <span class="time">
+                      <input type="time" class="start-time" />
+                      ~
+                      <input type="time" class="end-time" />
+                    </span>
+                    <textarea class="memo" placeholder="memo"></textarea>
+                  </div>
+                </li>
+              </ul>
+            </details>
+          </div>
+          <div class="plan-btns">
+            <button type="button" id="day-plan-add">추가</button>
+            <button type="button" id="plan-save">저장</button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=df5c96b061e80ea455e8d15773c44292"
+    ></script>
+    <script src="../js/localcode.js"></script>
+    <script src="../js/planner.js"></script>
+  </body>
+</html>

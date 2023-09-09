@@ -1,0 +1,322 @@
+.container {
+  display: flex;
+  height: 100vh;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-use-select: none;
+  user-select: none;
+}
+
+/* ========================= 검색 ======================= */
+.search {
+  width: 25vw;
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+.search > div {
+  margin: auto;
+  margin-top: 10px;
+}
+
+/* 검색창 */
+#searchBar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  box-shadow: 2px 2px 3px 1px rgba(228, 228, 228, 0.7);
+  border-radius: 5px;
+  width: 90%;
+  height: min(5%, 45px);
+  margin-top: 15px;
+
+  > img {
+    width: auto;
+    height: 50%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  > input {
+    border: 0;
+    width: 80%;
+    height: 60%;
+    font-size: 1.1rem;
+  }
+
+  > input:focus {
+    outline: none;
+  }
+}
+
+/* 검색 조건 */
+.filter {
+  width: 90%;
+
+  .sidogugun {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > select {
+      width: 48%;
+      font-size: 1.1rem;
+      border: 1px solid rgb(233, 233, 233);
+      border-radius: 5px;
+    }
+  }
+
+  .service {
+    margin: 10px 0;
+
+    > details {
+      border: 1px solid rgb(233, 233, 233);
+      background-color: white;
+      border-radius: 5px;
+      padding: 10px;
+
+      > summary {
+        font-weight: bold;
+      }
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        margin: 8px;
+      }
+    }
+  }
+}
+
+/* 관광지 리스트 */
+.location-list {
+  width: 90%;
+
+  > ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 3px;
+
+    > li {
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 2px 2px 3px 1px rgb(189, 189, 189);
+      width: 100%;
+      margin: 8px 0px;
+
+      > div {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-gap: 2px;
+        grid-template-areas:
+          "a b b d"
+          "a c c e";
+        padding: 5px;
+
+        .loca-img {
+          grid-area: a;
+          width: 100%;
+          height: auto;
+          padding: 2px;
+          margin: auto;
+        }
+
+        .location {
+          grid-area: b;
+          width: 100%;
+          height: auto;
+          padding: 2px;
+          font-size: 0.9rem;
+        }
+
+        .address {
+          grid-area: c;
+          width: 100%;
+          height: auto;
+          padding: 2px;
+          font-size: 0.9rem;
+        }
+
+        .like {
+          grid-area: d;
+          width: 1.5rem;
+          margin: auto;
+        }
+
+        .add-to-plan {
+          grid-area: e;
+          width: 1.5rem;
+          margin: auto;
+        }
+      }
+    }
+
+    > li:hover {
+      box-shadow: 2px 2px 3px 1px rgb(0, 0, 0);
+      cursor: pointer;
+    }
+  }
+}
+
+/* ========================= 지도 ======================= */
+.map {
+  width: 50vw;
+  border: 1px solid rgb(235, 235, 235);
+}
+
+/* ========================= 플랜 ======================= */
+.plan {
+  width: 25vw;
+  padding: 10px;
+  overflow-y: scroll;
+
+  > span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 8%;
+  }
+
+  #start-date {
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 1px solid rgb(204, 204, 204);
+    cursor: pointer;
+  }
+
+  .plan-btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > button {
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 5px 15px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 1px 1px 2px 1px rgb(109, 109, 109);
+      cursor: pointer;
+    }
+
+    #day-plan-add {
+      background-color: rgb(220, 255, 234);
+    }
+
+    #day-plan-add:active {
+      background-color: rgb(203, 245, 220);
+      box-shadow: inset 2px 2px 1px rgb(109, 109, 109);
+    }
+
+    #plan-save {
+      background-color: rgb(76, 226, 189);
+    }
+
+    #plan-save:active {
+      background-color: rgb(81, 204, 173);
+      box-shadow: inset 2px 2px 1px rgb(109, 109, 109);
+    }
+  }
+}
+
+.day-plan {
+  margin-top: 8%;
+  margin-bottom: 4%;
+
+  > details {
+    background-color: white;
+    box-shadow: 2px 2px 3px 1px rgb(189, 189, 189);
+    border-radius: 5px;
+    padding: 8px;
+    margin: 10px auto;
+
+    > summary {
+      font-weight: bold;
+      font-size: 1.05rem;
+      cursor: pointer;
+    }
+
+    .one-plan {
+      border: 1px solid rgb(202, 202, 202);
+      border-radius: 5px;
+      background-color: white;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-gap: 2px;
+      grid-template-areas:
+        "a b b"
+        "a c c"
+        "d d d"
+        "e e e"
+        "e e e";
+      margin: 15px 5px 5px 5px;
+      padding: 5px;
+
+      > img {
+        grid-area: a;
+        width: 100%;
+        height: auto;
+        padding: 2px;
+        margin: auto;
+      }
+
+      .location {
+        grid-area: b;
+        width: 100%;
+        height: auto;
+        padding: 2px;
+        font-size: 0.9rem;
+      }
+
+      .address {
+        grid-area: c;
+        width: 100%;
+        height: auto;
+        padding: 2px;
+        font-size: 0.9rem;
+      }
+
+      .time {
+        grid-area: d;
+        width: 100%;
+        height: auto;
+        padding: 2px;
+        font-size: 0.9rem;
+
+        > input {
+          border: 1px solid rgb(204, 204, 204);
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
+
+      .memo {
+        grid-area: e;
+        width: 100%;
+        height: auto;
+        padding: 2px;
+        font-size: 0.9rem;
+        border: 1px solid rgb(204, 204, 204);
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+/* ================ 기타 =============== */
+
+/* 스크롤바 디자인 */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(214, 214, 214);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(240, 240, 240);
+  border-radius: 10px;
+}
