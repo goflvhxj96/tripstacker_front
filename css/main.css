@@ -1,3 +1,9 @@
+.header-nav {
+  margin-left: 3%;
+  margin-right: 5%;
+  line-height: 50px;
+}
+
 /* =============================== Main ============================= */
 
 section {
@@ -19,7 +25,7 @@ section {
   top: 12%;
   z-index: 2;
 
-  > div > img {
+  > div > a > img {
     width: min(30vw, 400px);
   }
 
