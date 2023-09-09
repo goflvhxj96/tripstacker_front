@@ -9,11 +9,23 @@
 .backcolor {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e8fff0+12,ffffff+68 */
   background: rgb(232, 255, 240) fixed; /* Old browsers */
-  background: -moz-linear-gradient(top, rgba(232, 255, 240, 1) 12%, rgba(255, 255, 255, 1) 68%)
+  background: -moz-linear-gradient(
+      top,
+      rgba(232, 255, 240, 1) 12%,
+      rgba(255, 255, 255, 1) 68%
+    )
     fixed; /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(232, 255, 240, 1) 12%, rgba(255, 255, 255, 1) 68%)
+  background: -webkit-linear-gradient(
+      top,
+      rgba(232, 255, 240, 1) 12%,
+      rgba(255, 255, 255, 1) 68%
+    )
     fixed; /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(232, 255, 240, 1) 12%, rgba(255, 255, 255, 1) 68%)
+  background: linear-gradient(
+      to bottom,
+      rgba(232, 255, 240, 1) 12%,
+      rgba(255, 255, 255, 1) 68%
+    )
     fixed; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8fff0', endColorstr='#ffffff',GradientType=0 ) fixed; /* IE6-9 */
 
@@ -100,4 +112,14 @@ footer {
 .footer-list > li {
   margin: 10px;
   font-weight: bold;
+}
+
+/* =============================== 로그인 / 로그아웃 ============================= */
+
+.login-mode {
+  display: none;
+}
+
+.logout-mode {
+  display: block;
 }
