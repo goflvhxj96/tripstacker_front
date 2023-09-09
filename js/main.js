@@ -1,5 +1,6 @@
-// 그리드 내 각각의 이미지 옵저버
-// 옵저버 옵션
+/*
+    그리드 내 각각의 이미지 옵저버
+*/
 const gridOption = { threshold: 0.6 };
 // 콜백함수
 let gridOpacityChange = (entries, observer) => {
@@ -19,7 +20,10 @@ imgs.forEach((o) => {
 })
 
 
-// 인기 플랜 옵저버
+
+/*
+    인기 플랜 옵저버
+*/
 const planOptions = { threshold: [0.6, 0.8] };
 // 콜백함수
 let planOpacityChange = (entries, observer) => {
@@ -41,7 +45,9 @@ planObserver.observe(document.querySelector(".plan"));
 
 
 
-// 인기 게시글 옵저버
+/*
+    인기 게시글 옵저버
+*/
 const boardOptions = { threshold: 0.4 };
 // 콜백함수
 let boardOpacityChange = (entries, observer) => {
@@ -58,7 +64,10 @@ const boardObserver = new IntersectionObserver(boardOpacityChange, boardOptions)
 boardObserver.observe(document.querySelector(".board"));
 
 
-// 인기 여행 플랜 캐러셀
+
+/*
+    인기 여행 플랜 캐러셀
+*/
 function slider() {
     lis = document.querySelectorAll(".plan > ul > li");
     ul = document.querySelector(".plan > ul");

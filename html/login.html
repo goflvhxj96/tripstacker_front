@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>로그인</title>
     <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/header_footer.css" />
   </head>
   <body class="backcolor">
     <!-- 헤더 & 네비게이션 -->
@@ -12,7 +13,7 @@
       <nav class="header-nav horiverti-center">
         <div class="horiverti-center">
           <!-- 로고 -->
-          <img id="logo" src="../assets/logo1.PNG" alt="TripStacker Logo" />
+          <img id="logo" src="../assets/logo1.png" alt="TripStacker Logo" />
           <!-- plan | board -->
           <div>
             <ul class="navigate-list">
@@ -23,16 +24,20 @@
           </div>
         </div>
         <!-- 로그인 전 -->
-        <ul class="navigate-list logout-mode">
-          <li><a href="#" id="login">Sign In</a></li>
-          <li>|</li>
-          <li><a href="#">Sign Up</a></li>
-        </ul>
+        <div class="logout-mode">
+          <ul class="navigate-list">
+            <li><a href="./login.html" id="login">Sign In</a></li>
+            <li>|</li>
+            <li><a href="./login.html">Sign Up</a></li>
+          </ul>
+        </div>
         <!-- 로그인 후 -->
-        <ul class="navigate-list login-mode">
-          <li><a href="#" id="user">OOO 님</a></li>
-          <li><a href="#" id="logout">Logout</a></li>
-        </ul>
+        <div class="login-mode">
+          <ul class="navigate-list">
+            <li><a href="#" id="user">OOO 님</a></li>
+            <li><a href="#" id="logout">Logout</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -57,7 +62,9 @@
             <h2 class="form__title">로그인</h2>
             <input type="email" placeholder="이메일" class="input" />
             <input type="password" placeholder="비밀번호" class="input" />
-            <div class="link" id="id-record"><span>아이디 저장</span><input type="checkbox" /></div>
+            <div class="link" id="id-record">
+              <span>아이디 저장</span><input type="checkbox" />
+            </div>
             <a href="#" class="link">비밀번호 찾기</a>
             <button class="btn">로그인</button>
           </form>
