@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TripStacker</title>
+    <title>로그인</title>
     <link rel="stylesheet" href="../css/login.css" />
-    <link rel="stylesheet" href="../css/header_footer.css" />
   </head>
   <body class="backcolor">
     <!-- 헤더 & 네비게이션 -->
@@ -13,33 +12,27 @@
       <nav class="header-nav horiverti-center">
         <div class="horiverti-center">
           <!-- 로고 -->
-          <a href="./main.html"
-            ><img id="logo" src="../assets/logo1.png" alt="TripStacker Logo"
-          /></a>
+          <img id="logo" src="../assets/logo1.PNG" alt="TripStacker Logo" />
           <!-- plan | board -->
           <div>
             <ul class="navigate-list">
-              <li><a href="./planner.html" id="plan">Plan</a></li>
+              <li><a href="#" id="plan">Plan</a></li>
               <li>|</li>
-              <li><a href="./myplace.html" id="board">Board</a></li>
+              <li><a href="#" id="board">Board</a></li>
             </ul>
           </div>
         </div>
         <!-- 로그인 전 -->
-        <div class="logout-mode">
-          <ul class="navigate-list">
-            <li><a href="./login.html" id="login">Sign In</a></li>
-            <li>|</li>
-            <li><a href="./login.html">Sign Up</a></li>
-          </ul>
-        </div>
+        <ul class="navigate-list logout-mode">
+          <li><a href="#" id="login">Sign In</a></li>
+          <li>|</li>
+          <li><a href="#">Sign Up</a></li>
+        </ul>
         <!-- 로그인 후 -->
-        <div class="login-mode">
-          <ul class="navigate-list">
-            <li><a href="#" id="user">OOO 님</a></li>
-            <li><a href="#" id="logout">Logout</a></li>
-          </ul>
-        </div>
+        <ul class="navigate-list login-mode">
+          <li><a href="#" id="user">OOO 님</a></li>
+          <li><a href="#" id="logout">Logout</a></li>
+        </ul>
       </nav>
     </header>
 
@@ -85,6 +78,6 @@
     </main>
     <!-- 푸터 -->
     <footer></footer>
-    <script src="../js/login.js"></script>
+    <script src="../js/login.js"></scri>
   </body>
 </html>
