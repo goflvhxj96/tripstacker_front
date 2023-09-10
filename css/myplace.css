@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'SUITE-Regular';
+}
+
+@font-face {
+  font-family: 'SUITE-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2')
+    format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+/* ========= 최근 본 여행지 ========= */
+.visit-page {
+  position: fixed;
+  right: 3%;
+  top: 150px;
+  background-color: white;
+  width: 120px;
+  height: 330px;
+  color: rgb(65, 65, 65);
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+    4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  font-size: small;
+
+  .visit-container {
+    text-align: center;
+    margin-top: 10px;
+
+    > h3 {
+      margin-bottom: 15px;
+    }
+
+    > ul {
+      > li {
+        > img {
+          width: 100px;
+          border-radius: 5px;
+        }
+      }
+    }
+    > input {
+      width: 100px;
+      color: white;
+      margin-bottom: 5%;
+      border-radius: 5px;
+      padding: 2%;
+      box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+        7px 7px 20px 0px rgba(0, 0, 0, 0.1), 1px 1px 3px 0px rgba(0, 0, 0, 0.1);
+      outline: none;
+      background: linear-gradient(0deg, rgb(162, 81, 238) 0%, white 100%);
+      border: none;
+      font-size: x-small;
+    }
+  }
+}
+
+/* 본문 */
+.container {
+  margin: 10%;
+  margin-right: 230px;
+}
+
+section {
+  display: flex;
+}
+
+#map {
+  margin: 1rem;
+}
+
+.editor {
+  > input {
+    background-color: #fff;
+    border: none;
+    padding: 0.9rem 0.9rem;
+    margin: 1rem;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: inset 3px 2px 5px #babebc, inset -5px -5px 12px #fff;
+  }
+
+  > img {
+    margin: 1rem;
+    display: none;
+  }
+
+  #content {
+    height: 30%;
+  }
+
+  #recordBtn {
+    width: 100px;
+    color: white;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    padding: 2%;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+      1px 1px 3px 0px rgba(0, 0, 0, 0.1);
+    outline: none;
+    background: linear-gradient(0deg, rgb(162, 81, 238) 0%, white 100%);
+    border: none;
+  }
+}

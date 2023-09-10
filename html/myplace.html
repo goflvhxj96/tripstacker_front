@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TripStacker</title>
+    <link rel="stylesheet" href="../css/myplace.css" />
+    <link rel="stylesheet" href="../css/header_footer.css" />
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4aba9921d866d3e08fe498579f2bd67b"
+    ></script>
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+  </head>
+  <body class="backcolor">
+    <!-- 헤더 & 네비게이션 -->
+    <header>
+      <nav class="header-nav horiverti-center">
+        <div class="horiverti-center">
+          <!-- 로고 -->
+          <a href="./main.html"
+            ><img id="logo" src="../assets/logo1.png" alt="TripStacker Logo"
+          /></a>
+          <!-- plan | board -->
+          <div>
+            <ul class="navigate-list">
+              <li><a href="./planner.html" id="plan">Plan</a></li>
+              <li>|</li>
+              <li><a href="./myplace.html" id="board">Board</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- 로그인 전 -->
+        <div class="logout-mode">
+          <ul class="navigate-list">
+            <li><a href="./login.html" id="login">Sign In</a></li>
+            <li>|</li>
+            <li><a href="./login.html">Sign Up</a></li>
+          </ul>
+        </div>
+        <!-- 로그인 후 -->
+        <div class="login-mode">
+          <ul class="navigate-list">
+            <li><a href="mypage.html" id="user">OOO 님</a></li>
+            <li><a href="#" id="logout">Logout</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 메인 -->
+    <main class="container">
+      <h1>나의 핫플 공유하기</h1>
+      <section>
+        <div>
+          <div id="map" style="width: 500px; height: 400px"></div>
+        </div>
+        <div class="editor">
+          <input type="text" placeholder="장소명 : 어디에 다녀오셨나요?" />
+          <input
+            type="file"
+            id="uploadFile"
+            onChange="uploadImgPreview();"
+            accept="image/*"
+          /><br />
+          <img id="thumbnailImg" src="" width="300" />
+          <input type="text" id="content" placeholder="내용을 입력하세요." />
+          <input type="button" id="recordBtn" value="저장하기" />
+        </div>
+      </section>
+      <!-- 최근 본 여행지 -->
+      <aside class="visit-page">
+        <div class="visit-container">
+          <h3>최근 본 여행 블록</h3>
+          <input type="button" value="▲" />
+          <ul>
+            <li><img src="../assets/img/img1.jpg" alt="visit1" /></li>
+            <li><img src="../assets/img/img2.jpg" alt="visit2" /></li>
+            <li><img src="../assets/img/img3.jpg" alt="visit3" /></li>
+          </ul>
+          <input type="button" value="▼" />
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <ul class="footer-list">
+        <li>개인정보처리방침</li>
+        <li>이용약관</li>
+        <li>서울10반</li>
+        <li>이성은</li>
+        <li>전소민</li>
+        <li>&copy; SSAFY Corp.</li>
+      </ul>
+    </footer>
+
+    <!-- js -->
+    <script src="../js/myplace.js"></script>
+  </body>
+</html>
