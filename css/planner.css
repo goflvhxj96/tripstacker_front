@@ -23,6 +23,7 @@
 /* 검색창 */
 #searchBar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   background-color: white;
   box-shadow: 2px 2px 3px 1px rgba(228, 228, 228, 0.7);
@@ -30,18 +31,18 @@
   width: 90%;
   height: min(5%, 45px);
   margin-top: 15px;
+  padding: 5px;
 
   > img {
     width: auto;
-    height: 50%;
-    padding-left: 5px;
-    padding-right: 5px;
+    height: 80%;
+    cursor: pointer;
   }
 
   > input {
     border: 0;
-    width: 80%;
-    height: 60%;
+    width: 85%;
+    height: 100%;
     font-size: 1.1rem;
   }
 
@@ -67,7 +68,7 @@
     }
   }
 
-  .service {
+  .service-type {
     margin: 10px 0;
 
     > details {
