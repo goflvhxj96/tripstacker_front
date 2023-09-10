@@ -99,6 +99,11 @@
     margin-top: 20px;
     padding: 3px;
 
+    #listCnt {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
     > li {
       background-color: white;
       border-radius: 5px;
@@ -232,9 +237,16 @@
     margin: 10px auto;
 
     > summary {
+      display: flex;
       font-weight: bold;
       font-size: 1.05rem;
       cursor: pointer;
+      justify-content: space-between;
+      align-items: center;
+
+      .day-cancel-img {
+        width: min(10%, 30px);
+      }
     }
 
     .one-plan {
@@ -242,18 +254,18 @@
       border-radius: 5px;
       background-color: white;
       display: grid;
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: repeat(6, 1fr);
       grid-gap: 2px;
       grid-template-areas:
-        "a b b"
-        "a c c"
-        "d d d"
-        "e e e"
-        "e e e";
+        "a a b b b b"
+        "a a c c c c"
+        "d d d d d f"
+        "e e e e e e"
+        "e e e e e e";
       margin: 15px 5px 5px 5px;
       padding: 5px;
 
-      > img {
+      .loca-img {
         grid-area: a;
         width: 100%;
         height: auto;
@@ -289,6 +301,13 @@
           border-radius: 5px;
           cursor: pointer;
         }
+      }
+
+      .loca-cancel-img {
+        grid-area: f;
+        width: min(50%, 30px);
+        margin: auto;
+        cursor: pointer;
       }
 
       .memo {

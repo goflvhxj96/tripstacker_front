@@ -106,8 +106,8 @@
           <!-- 공공데이터의 관광지 리스트 -->
           <div class="location-list">
             <ul>
-              <div>전체 3개</div>
-              <li id="llt1">
+              <div id="listCnt">전체 0개</div>
+              <li id="llt0">
                 <div>
                   <img
                     src="http://tong.visitkorea.or.kr/cms/resource/00/2879100_image2_1.jpg"
@@ -123,6 +123,7 @@
                     src="../assets/add.png"
                     alt="일정추가"
                     class="add-to-plan"
+                    onclick="addDayPlanList(0)"
                   />
                 </div>
               </li>
@@ -136,10 +137,11 @@
                     src="../assets/add.png"
                     alt="일정추가"
                     class="add-to-plan"
+                    onclick="addDayPlanList(1)"
                   />
                 </div>
               </li>
-              <li id="llt1">
+              <li id="llt2">
                 <div>
                   <img
                     src="http://tong.visitkorea.or.kr/cms/resource/12/2901512_image2_1.jpg"
@@ -153,6 +155,7 @@
                     src="../assets/add.png"
                     alt="일정추가"
                     class="add-to-plan"
+                    onclick="addDayPlanList(2)"
                   />
                 </div>
               </li>
@@ -169,93 +172,23 @@
           <input type="date" name="start-date" id="start-date" />
           <div class="day-plan">
             <!-- 일수 -->
-            <details id="day1">
-              <summary>📜 1일차</summary>
-              <ul>
-                <!-- 일 별 장소 -->
-                <li>
-                  <div id="day1loca1" class="one-plan">
-                    <img
-                      src="http://tong.visitkorea.or.kr/cms/resource/00/2879100_image2_1.jpg"
-                      alt=""
-                    />
-                    <span class="location"
-                      >🔹가가밀라노 롯데백화점 에비뉴엘 월드타워점</span
-                    >
-                    <span class="address">🔹서울 송파구 올림픽로 300¸ 2층</span>
-                    <span class="time">
-                      <input type="time" class="start-time" />
-                      ~
-                      <input type="time" class="end-time" />
-                    </span>
-                    <textarea class="memo" placeholder="memo"></textarea>
-                  </div>
-                </li>
-                <li>
-                  <div id="day1loca2" class="one-plan">
-                    <img
-                      src="http://tong.visitkorea.or.kr/cms/resource/00/2879100_image2_1.jpg"
-                      alt=""
-                    />
-                    <span class="location"
-                      >🔹가가밀라노 롯데백화점 에비뉴엘 월드타워점</span
-                    >
-                    <span class="address">🔹서울 송파구 올림픽로 300¸ 2층</span>
-                    <span class="time">
-                      <input type="time" class="start-time" />
-                      ~
-                      <input type="time" class="end-time" />
-                    </span>
-                    <textarea class="memo" placeholder="memo"></textarea>
-                  </div>
-                </li>
-              </ul>
-            </details>
-            <details id="day2">
-              <summary>📜 2일차</summary>
-              <ul>
-                <!-- 일 별 장소 -->
-                <li>
-                  <div id="day1loca1" class="one-plan">
-                    <img
-                      src="http://tong.visitkorea.or.kr/cms/resource/00/2879100_image2_1.jpg"
-                      alt="image"
-                    />
-                    <span class="location"
-                      >🔹가가밀라노 롯데백화점 에비뉴엘 월드타워점</span
-                    >
-                    <span class="address">🔹서울 송파구 올림픽로 300¸ 2층</span>
-                    <span class="time">
-                      <input type="time" class="start-time" />
-                      ~
-                      <input type="time" class="end-time" />
-                    </span>
-                    <textarea class="memo" placeholder="memo"></textarea>
-                  </div>
-                </li>
-                <li>
-                  <div id="day1loca2" class="one-plan">
-                    <img
-                      src="http://tong.visitkorea.or.kr/cms/resource/00/2879100_image2_1.jpg"
-                      alt=""
-                    />
-                    <span class="location"
-                      >🔹가가밀라노 롯데백화점 에비뉴엘 월드타워점</span
-                    >
-                    <span class="address">🔹서울 송파구 올림픽로 300¸ 2층</span>
-                    <span class="time">
-                      <input type="time" class="start-time" />
-                      ~
-                      <input type="time" class="end-time" />
-                    </span>
-                    <textarea class="memo" placeholder="memo"></textarea>
-                  </div>
-                </li>
-              </ul>
+            <details id="day1" onclick="addEventToDayPlan('day1')">
+              <summary>
+                📜 1일차
+                <img
+                  src="../assets/cancel.png"
+                  alt="지우기"
+                  class="day-cancel-img"
+                  onclick="deleteDay('day1')"
+                />
+              </summary>
+              <ul></ul>
             </details>
           </div>
           <div class="plan-btns">
-            <button type="button" id="day-plan-add">추가</button>
+            <button type="button" id="day-plan-add" onclick="addDay()">
+              추가
+            </button>
             <button type="button" id="plan-save">저장</button>
           </div>
         </article>
